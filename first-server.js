@@ -3,7 +3,7 @@ const http = require("http");
 // Define the port to listen on
 // YOU CANNOT LISTEN ON PORT 80 <---- WHY
 const PORTA = 7000;
-const PORTB = 7050;
+const PORTB = 7500;
 
 function responseHandler(require, response) {
   // Say hi
