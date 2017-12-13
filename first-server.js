@@ -16,12 +16,12 @@ const server = http.createServer(responseHandler);
 // tell the server to LISTEN to PORTA
 server.listen(PORTA, function() {
   console.log("I'm listening to PORT-B");
-  console.error("visist http:..localhost:${PORTA}");
+  console.error("Visit http:..localhost:${PORTA}");
 });
 
 
 // tell the server to LISTEN to PORTB
 server.listen(PORTB, function() {
   console.log("I'm listening to PORT-A");
-  console.error("visist http:..localhost:${PORTB}");
+  console.error("Visit http:..localhost:${PORTB}");
 });
