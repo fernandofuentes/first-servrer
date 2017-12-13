@@ -14,12 +14,13 @@ function responseHandlerB(require, response) {
   // Say hi
   response.end("HOLA! I love server B!");
 }
-const server = http.createServer(responseHandler);
+const serverA = http.createServer(responseHandlerA);
+const serverB = http.createServer(responseHandlerB);
 
 
 
 // tell the server to LISTEN to PORTA
-server.listen(PORTA, function() {
+serverA.listen(PORTA, function() {
   console.log("====================================");
   console.log("I'm listening to PORT-B");
   console.error("Visit http:..localhost:${PORTA}");
@@ -28,7 +29,7 @@ server.listen(PORTA, function() {
 
 
 // tell the server to LISTEN to PORTB
-server.listen(PORTB, function() {
+serverB.listen(PORTB, function() {
   console.log("====================================");
   console.log("I'm listening to PORT-B");
   console.error("Visit http:..localhost:${PORTB}");
