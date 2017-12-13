@@ -2,15 +2,24 @@
 const http - require("http");
 // Define the port to listen on
 // YOU CANNOT LISTEN ON PORT 80 <---- WHY
-const PORT = 8080;
+const PORTA = 7000;
+const PORTB = 7050;
 
-function responseHandler(reques, response) {
+function responseHandler(require, response) {
   // Say hi
   response.end("HOLA!");
 }
 const server = http.createServer(responseHandler);
-// tell the server to LISTEN
+
+// tell the server to LISTEN to PORTA
 server.listen(PORT, function() {
-  console.log("I'm listening");
-  console.error("visist http:..localhost:${PORT}");
+  console.log("I'm listening to PORT-B");
+  console.error("visist http:..localhost:${PORTA}");
+});
+
+
+// tell the server to LISTEN to PORTB
+server.listen(PORT, function() {
+  console.log("I'm listening to PORT-A");
+  console.error("visist http:..localhost:${PORTB}");
 });
