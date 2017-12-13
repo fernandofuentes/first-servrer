@@ -24,7 +24,8 @@ server.listen(PORTA, function() {
 
 // tell the server to LISTEN to PORTB
 server.listen(PORTB, function() {
-  console.log("I'm listening to PORT-A");
+  console.log("====================================");
+  console.log("I'm listening to PORT-B");
   console.error("Visit http:..localhost:${PORTB}");
   console.log("====================================");
 });
