@@ -1,5 +1,5 @@
 // Import HTTP module
-const http - require("http");
+const http = require("http");
 // Define the port to listen on
 // YOU CANNOT LISTEN ON PORT 80 <---- WHY
 const PORTA = 7000;
@@ -11,15 +11,17 @@ function responseHandler(require, response) {
 }
 const server = http.createServer(responseHandler);
 
+
+
 // tell the server to LISTEN to PORTA
-server.listen(PORT, function() {
+server.listen(PORTA, function() {
   console.log("I'm listening to PORT-B");
   console.error("visist http:..localhost:${PORTA}");
 });
 
 
 // tell the server to LISTEN to PORTB
-server.listen(PORT, function() {
+server.listen(PORTB, function() {
   console.log("I'm listening to PORT-A");
   console.error("visist http:..localhost:${PORTB}");
 });
