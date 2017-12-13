@@ -5,9 +5,14 @@ const http = require("http");
 const PORTA = 7000;
 const PORTB = 7500;
 
-function responseHandler(require, response) {
+function responseHandlerA(require, response) {
   // Say hi
-  response.end("HOLA!");
+  response.end("HOLA! I love server A!");
+}
+
+function responseHandlerB(require, response) {
+  // Say hi
+  response.end("HOLA! I love server B!");
 }
 const server = http.createServer(responseHandler);
 
